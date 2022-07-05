@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+  --section-1: rgb(55, 164, 127);
+  --section-2: rgb(57, 57, 57);
+  --box-1: rgb(231, 67, 67);
+  --box-2: rgb(231, 163, 67);
+  --box-3: rgb(53, 155, 228);
+}
+main {
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+}
+maim ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+.one {
+  background-color: var(--section-1);
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+main nav ul li a {
+  color: var(--section-1);
+  margin-left: 10px;
+}
+main nav {
+  display: flex;
+  justify-content: space-around;
+}
+main nav ul {
+  display: flex;
+}
+.two {
+  background-color: var(--section-2);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: center;
+}
+.two div {
+  width: 100px;
+
+  height: 150px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+}
+.card:focus {
+  transform: rotateY(180deg);
+}
+.container-card {
+  perspective: 800px;
+  margin: 10px;
+}
+
+.ones {
+  background-color: var(--box-1);
+}
+.twos {
+  background-color: var(--box-2);
+}
+.threes {
+  background-color: var(--box-3);
+}
+.two .img {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  backface-visibility: hidden;
+  background-image: url(img/yu-gi-oh2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.two #color-one,
+.img {
+  position: absolute;
+}
+#rgb {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  
+}
+@media (max-width: 470px) {
+  .container-card {
+    transform: scale(1);
+  }
+  .two div {
+    width: 55px;
+    height: 79px;
+  }
+}
