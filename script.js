@@ -130,3 +130,27 @@ function generator() {
   sbox6.setAttribute("class", boxCard[5].class);
 }
 window.onload = generator();
+
+let numeros = [0, 1, 2, 3, 4, 5];
+let frutas = ["maca", "banana", "laranja", "pera", "uva"];
+let call = [];
+function randomNumCall(list) {
+  for (let i = 1; i <= 3; i++) {
+    let numRandom1 = Math.floor(Math.random() * list.length);
+    call.push(list[numRandom1]);
+  }
+  return call;
+}
+function getT(list, itens = 6) {
+  return [...list].sort(() => (Math.random() > 0.5 ? 1 : -1)).slice(0, itens);
+}
+
+
+// console.log(randomNumCall(frutas));
+// console.log(randomNumCall(frutas));
+// console.log(randomNumCall(frutas));
+
+console.log(getT(frutas))
+console.log(getT(frutas));
+
+console.log(...frutas);
